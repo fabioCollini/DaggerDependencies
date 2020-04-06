@@ -24,9 +24,7 @@ interface MyModule {
     companion object {
         @Singleton
         @Provides
-        fun provideApi(): Api {
-            return createApiImplementationUsingRetrofit()
-        }
+        fun provideApi(): Api = createApiImplementationUsingRetrofit()
     }
 }
 
