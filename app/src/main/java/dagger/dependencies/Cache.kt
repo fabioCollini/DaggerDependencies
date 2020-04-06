@@ -19,3 +19,9 @@ class DatabaseCache @Inject constructor(
 ) : Cache {
     override fun load(): String? = database.executeQuery()
 }
+
+@Singleton
+class InMemoryCache @Inject constructor(
+) : Cache {
+    override fun load(): String? = null
+}
